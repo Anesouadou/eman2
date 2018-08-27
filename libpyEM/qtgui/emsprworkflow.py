@@ -38,6 +38,7 @@ from builtins import range
 from builtins import object
 from .emform import EMFormWidget,EMParamTable,EMTableFormWidget
 from .emdatastorage import ParamDef
+from .emboxerbase import EMBoxerModule
 from PyQt4 import QtGui,QtCore
 from PyQt4.QtCore import Qt
 from EMAN2db import db_check_dict, db_open_dict,db_remove_dict,db_list_dicts,db_close_dict, e2getcwd
@@ -2436,7 +2437,6 @@ Generally you don't want to work with more than ~10 at a time. To autobox, make 
 			options.running_mode = "gui"
 			options.method = "Swarm"
 			
-			from .emboxerbase import EMBoxerModule
 			from e2boxer import  SwarmTool
 			self.boxer_module = EMBoxerModule(params["filenames"],params["interface_boxsize"])
 															
